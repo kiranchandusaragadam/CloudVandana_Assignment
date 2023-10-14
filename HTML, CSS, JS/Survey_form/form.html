@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Survey Form</title>
+</head>
+<body>
+    <h1 style="margin-top: 25px;">Customer Survey Form</h1>
+  
+    <!-- Create Form -->
+    <form id="form">
+ 
+        <!-- from details -->
+        <div class="form-control" style="display: flex; justify-content: space-between;">
+            <span>
+                <label for="fname" id="label-name">
+                    First Name
+                </label>
+     
+                <!-- Input Type Text -->
+                <input type="text" id="fname" placeholder="First Name" required/>
+            </span>
+
+            <span>
+                <label for="lname" id="label-name">
+                    Last Name
+                </label>
+     
+                <!-- Input Type Text -->
+                <input type="text" id="lname" placeholder="Last Name" required/>
+            </span>
+        </div>
+  
+        <div class="form-control">
+            <label for="email" id="label-email">
+                Email
+            </label>
+ 
+            <!-- Input Type Email-->
+            <input type="email"
+                   id="email"
+                   placeholder="Enter your email" required/>
+        </div>
+
+        <div class="form-control">
+            <label for="mobile" id="label-mobile">
+                Mobile Number
+            </label>
+ 
+            <!-- Input Type Email-->
+            <input type="number"
+                   id="mobile"
+                   placeholder="Enter your mobile number" required/>
+        </div>
+  
+        <div class="form-control">
+            <label for="DOB" id="label-dob">
+                Date Of Birth
+            </label>
+ 
+            <!-- Input Type Text -->
+            <input type="date" id="DOB" required/>
+        </div>
+  
+        <div class="form-control">
+            <label for="country" id="label-country">
+                Which Country you are from?
+            </label>
+             
+            <!-- Dropdown -->
+            <select name="country" id="country" required>
+                <option value="">Choose any one...</option>
+                <option value="India">India</option>
+                <option value="Nepal">Nepal</option>
+                <option value="Bhutan">
+                    Bhutan
+                </option>
+                <option value="Bangladesh">Bangladesh</option>
+            </select>
+        </div>
+  
+        <div class="form-control">
+            <label>
+                Gender :
+            </label>
+ 
+            <label for="male"  style="display: inline; margin-right: 10px;">
+                <input type="radio"
+                       id="male"
+                       name="gen" required>Male</input>
+            </label>
+            <label for="female" style="display: inline;">
+                <input type="radio"
+                       id="female"
+                       name="gen">Female</input>
+            </label>
+        </div>
+  
+        <button type="reset" class="reset">
+            Reset
+        </button>
+        <button>Submit</button>
+    </form>
+
+    <div class="popup-container">
+        <h3>Confirm your details</h3>
+        <p class="firstName">First Name: </p>
+        <p class="lastName">Last Name: </p>
+        <p class="email">Email Id: </p>
+        <p class="mobile">Mobile Number: </p>
+        <p class="dob">Date of birth: </p>
+        <p class="country">Country: </p>
+        <p class="gender">Gender: </p>
+
+        <button value="ok" class="okBtn">Ok</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
